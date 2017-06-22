@@ -1,0 +1,28 @@
+#carousel div {
+				//width: 200px;
+				//height: 250px;
+				float: left;
+				position: relative;
+			}
+			
+			.carouTop {
+				top: 0;
+			}
+			
+			.carouBottom {
+				bottom:0;
+			}
+			
+			.wrapper {
+				width: 100%;
+				position: absolute;
+				left: 0;
+			}
+			
+			.wrapper img {
+				float:left
+			}
+			
+			.carouItem {
+				margin-right:15px;
+			}

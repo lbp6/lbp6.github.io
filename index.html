@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lbp</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/carouStyles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/audioStyles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/modalStyles.css"/>
+    
+    <style>
+      body {
+        background-image: url("bg.png");
+        background-size:cover;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .no-js #loader { display: none; }
+      .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+      .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(810.gif) center no-repeat #fff;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="se-pre-con"></div>
+  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script type="text/javascript" src="js/amplitude.js"></script>
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>-->
+    
+    <script type="text/javascript" src="js/carouInit.js"></script>
+    
+    <script>
+      $(window).load(function() {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");
+        $(initCarou);
+        //setTimeout(function() {
+          if ( document.getElementById("play-pause").classList.contains('amplitude-paused')){
+            document.getElementById("play-pause").classList.remove('amplitude-paused');
+            document.getElementById("play-pause").classList.add('amplitude-playing');
+            Amplitude.play();
+          }
+        //}, 5000);
+      });
+    </script>
+    
+    <div class="wrapper carouTop">
+      <div id="sliderTop">
+        <img class="carouItem" src="imgs/1.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/2.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/3.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/4.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/5.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/6.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/7.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/8.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/9.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/10.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/11.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/12.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/13.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/14.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/15.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/16.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/17.jpg" style="height:40vh;"/>
+      </div>
+    </div>
+    
+    <div id="soundControl">
+      <div class="amplitude-play-pause amplitude-play-pause amplitude-paused" amplitude-main-play-pause="true" id="play-pause"></div>
+      <div class="amplitude-next" id="next"></div>
+      <input type="range" class="amplitude-volume-slider" amplitude-volume-slider="true"/>
+    </div>
+    
+    <div class="wrapper carouBottom">
+      <div id="sliderBottom">
+        <img class="carouItem" src="imgs/18.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/19.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/20.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/21.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/22.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/23.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/24.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/25.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/26.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/27.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/28.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/29.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/30.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/31.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/32.jpg" style="height:40vh;"/>
+        <img class="carouItem" src="imgs/33.jpg" style="height:40vh;"/>
+      </div>
+    </div>
+    
+    <div id="myModal" class="modal">    
+      <img class="modal-content" id="img01">
+    </div>
+    
+    <script type="text/javascript" src="js/modalInit.js"></script>
+    <script type="text/javascript" src="js/amplitudeInit.js"></script>
+    
+  </body>
+</html>
