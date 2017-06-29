@@ -8,13 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/modalStyles.css"/>
     
     <style>
-      body {
-        background-image: url("bg.png");
-        background-size:cover;
-        padding: 0;
-        margin: 0;
-      }
-      
       .no-js #loader { display: none; }
       .js #loader { display: block; position: absolute; left: 100px; top: 0; }
       .se-pre-con {
@@ -61,6 +54,28 @@
             Amplitude.play();
           }
         //}, 5000);
+        
+        setTimeout(function() {
+          $("#fest1").fadeIn(5000, function() {
+            setTimeout(function() {
+              $("#fest1").fadeOut(2000, function() {
+                setTimeout(function() {
+                  document.getElementById("fest2").style.display = "inline-block";
+                  $( "#fest2" ).animate({
+                    opacity: 1,
+                  }, 5000, function() {
+                    document.getElementById("fest3").style.display = "inline-block";
+                    $( "#fest3" ).animate({
+                      opacity: 1,
+                    }, 1000);
+                  });
+                }, 5000);
+              });
+            }, 10000);
+          });
+        }, 5000);
+        
+      
       });
     </script>
     
@@ -84,6 +99,12 @@
         <img class="carouItem" src="imgs/16.jpg" style="height:40vh;"/>
         <img class="carouItem" src="imgs/17.jpg" style="height:40vh;"/>
       </div>
+    </div>
+    
+    <div id="info-text">
+      <p id="fest1" style="opacity:1">В 2017 году lbp отменяется...</p>
+      <p id="fest2">Ему на смену приходит<br><b style="cursor: pointer;">Фестиваль музыки 80-х</b></p>
+      <p id="fest3" style="font-size: 2vh; vertical-align: bottom; margin-left: 20px; padding-bottom: 20px;">Больше информации позже здесь</p>
     </div>
     
     <div id="soundControl">

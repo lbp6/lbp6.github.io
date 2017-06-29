@@ -1,28 +1,53 @@
+body {
+  font-family: arial, sans-serif;
+  background-image: url("../bg.png");
+  background-size:cover;
+  padding: 0;
+  margin: 0;
+}
+
+#info-text {
+  font-size: 2.5vw;
+  position: fixed;
+  top: 50%;
+  left: calc(18vw + 135px);
+  width: 100vw;
+  height: 10vw;
+  margin-top: -5vw;
+  overflow: hidden;
+}
+
+#info-text p {
+  display: none;
+  vertical-align: middle;
+  opacity:0;
+}
+
 #carousel div {
-				//width: 200px;
-				//height: 250px;
-				float: left;
-				position: relative;
-			}
-			
-			.carouTop {
-				top: 0;
-			}
-			
-			.carouBottom {
-				bottom:0;
-			}
-			
-			.wrapper {
-				width: 100%;
-				position: absolute;
-				left: 0;
-			}
-			
-			.wrapper img {
-				float:left
-			}
-			
-			.carouItem {
-				margin-right:15px;
-			}
+	//width: 200px;
+	//height: 250px;
+	float: left;
+	position: relative;
+}
+
+.carouTop {
+	top: 0;
+}
+
+.carouBottom {
+	bottom:0;
+}
+
+.wrapper {
+	width: 100%;
+	position: absolute;
+	left: 0;
+}
+
+.wrapper img {
+	float:left
+}
+
+.carouItem {
+	margin-right:15px;
+}

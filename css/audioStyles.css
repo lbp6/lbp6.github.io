@@ -1,18 +1,18 @@
 #soundControl{
-  width:400px;
-  position:fixed;
+  width: calc(15vw + 110px);
+  position: fixed;
   top: 50%;
-  left: 50%;
+  left: 2%;
   margin-top: -30px;
-  margin-left: -200px;
+  //margin-left: -200px;
 }
 
 input[type=range].amplitude-volume-slider{
 	-webkit-appearance: none;
-	width: 65%;
+	width: 15vw;
 	float: left;
 	margin-top: 28px;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 @-moz-document url-prefix() { 
