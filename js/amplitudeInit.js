@@ -1,6 +1,6 @@
 Amplitude.init({"songs": [
-		{ "url": "mp3/a9b0e5c030d7a2.mp3" },
 		{ "url": "mp3/212a57814a1c85.mp3" },
+		{ "url": "mp3/a9b0e5c030d7a2.mp3" },
 		{ "url": "mp3/0b4c56eed3f6f4.mp3" },
 		{ "url": "mp3/672fcfe0dfd7e6.mp3" },
 		{ "url": "mp3/5226caddc9b43a.mp3" },

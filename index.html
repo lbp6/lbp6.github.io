@@ -63,19 +63,19 @@
                   document.getElementById("fest2").style.display = "inline-block";
                   $( "#fest2" ).animate({
                     opacity: 1,
-                  }, 5000, function() {
-                    document.getElementById("fest3").style.display = "inline-block";
-                    $( "#fest3" ).animate({
-                      opacity: 1,
-                    }, 1000);
-                  });
+                  }, 5000);
                 }, 5000);
               });
-            }, 10000);
+            }, 15000);
           });
         }, 5000);
         
-      
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+        var isEdge = !isIE && !!window.StyleMedia;
+        if (isEdge == true) {
+          document.getElementById("volSlider").innerHTML = '<input type="range" max="100" min="0" step="0.01" style="left:42.5%; position:fixed;" onchange="changevolume(this.value)"/>';
+          console.log(isEdge.value);
+        }
       });
     </script>
     
@@ -103,14 +103,13 @@
     
     <div id="info-text">
       <p id="fest1" style="opacity:1">В 2017 году lbp отменяется...</p>
-      <p id="fest2">Ему на смену приходит<br><b style="cursor: pointer;">Фестиваль музыки 80-х</b></p>
-      <p id="fest3" style="font-size: 2vh; vertical-align: bottom; margin-left: 20px; padding-bottom: 20px;">Больше информации позже здесь</p>
+      <p id="fest2">Ему на смену приходит<br><b style="cursor: pointer; color: #FF7F50;" class="vid">Фестиваль музыки 80-х</b></p>
     </div>
     
     <div id="soundControl">
       <div class="amplitude-play-pause amplitude-play-pause amplitude-paused" amplitude-main-play-pause="true" id="play-pause"></div>
       <div class="amplitude-next" id="next"></div>
-      <input type="range" class="amplitude-volume-slider" amplitude-volume-slider="true"/>
+      <input type="range" class="amplitude-volume-slider" amplitude-volume-slider="true" onchange="changevolume(this.value)"/>
     </div>
     
     <div class="wrapper carouBottom">
@@ -136,6 +135,15 @@
     
     <div id="myModal" class="modal">    
       <img class="modal-content" id="img01">
+    </div>
+    
+    <div id="videoModal" class="modal">  
+      <span class="close" onclick="">&times;</span>
+      <video class="modal-content" id="vid1" height='90%'>
+        <source src="vid.mp4" type="video/mp4" />
+      </video>
+      <div id="volSlider"><input type="range" class="amplitude-volume-slider" onchange="changevolume(this.value)" style="left:42.5%; position:fixed; margin-top:0"/></div>
+      <!--<input type="range" max="100" min="0" step="0.01" onchange="changevolume(this.value)"/>-->
     </div>
     
     <script type="text/javascript" src="js/modalInit.js"></script>
